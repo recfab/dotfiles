@@ -1,7 +1,12 @@
 // Place your settings in this file to overwrite the default settings
 {
     "editor.fontSize": 14,
-    "editor.wordWrap": "bounded",
+    "editor.wordWrap": "on",
     "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "nodeTdd.glob": "{src,test}/**/*.{js,ts,jsx,tsx}",
+    "nodeTdd.showCoverage": true,
+    "nodeTdd.coverageThreshold": 80,
+    "window.zoomLevel": 0,
+    "editor.fontFamily": " Menlo, Monaco, Arial Hebrew,  'Courier New', monospace"
 }
