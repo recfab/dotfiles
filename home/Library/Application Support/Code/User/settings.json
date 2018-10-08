@@ -4,9 +4,28 @@
     "editor.wordWrap": "on",
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
-    "nodeTdd.glob": "{src,test}/**/*.{js,ts,jsx,tsx}",
-    "nodeTdd.showCoverage": true,
-    "nodeTdd.coverageThreshold": 80,
     "window.zoomLevel": 0,
-    "editor.fontFamily": " Menlo, Monaco, Arial Hebrew,  'Courier New', monospace"
+    "editor.fontFamily": " Menlo, Monaco, Arial Hebrew,  'Courier New', monospace",
+    "editor.formatOnSave": false,
+    "editor.tabCompletion": true,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.colorTheme": "Violaceous (rainglow)",
+    "csharp.suppressDotnetRestoreNotification": true,
+    "todo-tree.defaultHighlight": {
+        "foreground": "green",
+        "type": "none"
+    },
+    "todo-tree.customHighlight": {
+        "TODO": {},
+        "FIXME": {}
+    },
+    "vetur.format.defaultFormatter.js": "none",
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "eslint.autoFixOnSave": true,
+    "eslint.packageManager": "yarn",
+    "prettier.eslintIntegration": true,
+    "standard.autoFixOnSave": true
 }
