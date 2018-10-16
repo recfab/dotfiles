@@ -86,3 +86,4 @@ fi
 
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
