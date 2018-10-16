@@ -1,0 +1,86 @@
+// Place your settings in this file to overwrite the default settings
+{
+<<<<<<< HEAD
+  "editor.fontSize": 14,
+  "editor.wordWrap": "on",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "nodeTdd.glob": "{src,test}/**/*.{js,ts,jsx,tsx}",
+  "nodeTdd.showCoverage": true,
+  "nodeTdd.coverageThreshold": 80,
+  "window.zoomLevel": 0,
+  "editor.fontFamily": " Menlo, Monaco, Arial Hebrew,  'Courier New', monospace",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "workbench.colorTheme": "Violaceous (rainglow)",
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "vscode-icons",
+  "[yaml]": {
+    "editor.formatOnSave": false
+  },
+  "todo-tree.defaultHighlight": {
+    "foreground": "green",
+    "type": "none"
+  },
+  "todo-tree.customHighlight": {
+    "TODO": {},
+    "FIXME": {}
+  },
+  "msbuildProjectTools": {
+    "logging": {
+      "level": "Information",
+      "seq": {},
+      "file": "",
+      "trace": false
+    },
+    "language": {
+      "disableFeature": {},
+      "useClassicProvider": false,
+      "disable": {
+        "hover": false
+      }
+    },
+    "nuget": {
+      "newestVersionsFirst": true,
+      "includePreRelease": true,
+      "disablePrefetch": false
+    },
+    "schemaVersion": 1
+  },
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "msbuildProjectTools.experimentalFeatures": [],
+  "msbuildProjectTools.nuget.includePreRelease": true,
+  "msbuildProjectTools.nuget.newestVersionsFirst": true,
+  "msbuildProjectTools.logging.seq.level": "Verbose"
+=======
+    "editor.fontSize": 14,
+    "editor.wordWrap": "on",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "window.zoomLevel": 0,
+    "editor.fontFamily": " Menlo, Monaco, Arial Hebrew,  'Courier New', monospace",
+    "editor.formatOnSave": false,
+    "editor.tabCompletion": true,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.colorTheme": "Violaceous (rainglow)",
+    "csharp.suppressDotnetRestoreNotification": true,
+    "todo-tree.defaultHighlight": {
+        "foreground": "green",
+        "type": "none"
+    },
+    "todo-tree.customHighlight": {
+        "TODO": {},
+        "FIXME": {}
+    },
+    "vetur.format.defaultFormatter.js": "none",
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "eslint.autoFixOnSave": true,
+    "eslint.packageManager": "yarn",
+    "prettier.eslintIntegration": true,
+    "standard.autoFixOnSave": true
+>>>>>>> bed85a7ee6672eca08da65b5fc06c9051a53193c
+}

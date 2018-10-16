@@ -28,4 +28,5 @@
     "eslint.packageManager": "yarn",
     "prettier.eslintIntegration": true,
     "standard.autoFixOnSave": true,
+    "terminal.integrated.shell.osx": "/bin/zsh"
 }
