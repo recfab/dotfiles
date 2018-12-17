@@ -86,4 +86,8 @@ fi
 
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
+eval $(minikube docker-env)
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
