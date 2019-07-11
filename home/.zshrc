@@ -84,10 +84,16 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
-eval $(minikube docker-env)
+# eval $(minikube docker-env)
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+# export PATH="~/.dotnet/tools:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
