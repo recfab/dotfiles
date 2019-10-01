@@ -4,28 +4,27 @@
     "editor.wordWrap": true,
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "editor.fontFamily": " Menlo, Monaco, Arial Hebrew,  'Courier New', monospace",
     "editor.formatOnSave": false,
     "editor.tabCompletion": true,
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
-    "workbench.colorTheme": "Violaceous (rainglow)",
+    "workbench.colorTheme": "Shades of Purple",
     "csharp.suppressDotnetRestoreNotification": true,
-    "todo-tree.defaultHighlight": {
-        "foreground": "green",
-        "type": "none"
-    },
-    "todo-tree.customHighlight": {
-        "TODO": {},
-        "FIXME": {}
-    },
     "vetur.format.defaultFormatter.js": "none",
     "editor.formatOnPaste": false,
     "editor.formatOnType": false,
     "eslint.autoFixOnSave": true,
     "eslint.packageManager": "yarn",
-    "prettier.eslintIntegration": true,
     "standard.autoFixOnSave": true,
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {},
+        "FIXME": {}
+    },
+    "todo-tree.highlights.defaultHighlight": {
+        "foreground": "green",
+        "type": "none"
+    },
 }
