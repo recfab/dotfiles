@@ -27,4 +27,10 @@
         "foreground": "green",
         "type": "none"
     },
+    "dotnet-test-explorer.autoExpandTree": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.enablePreview": false,
+    "asciidoc.asciidoctor_command": "asciidoctor -r asciidoctor-diagram",
+    "asciidoc.preview.useEditorStyle": false,
+    "asciidoc.use_asciidoctor_js": false,
 }
