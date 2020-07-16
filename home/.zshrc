@@ -51,7 +51,14 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose git-extras npm)
+plugins=(
+  docker
+  docker-compose
+  git
+  git-extras
+  kubectl
+  kube-ps1
+  )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,12 +95,19 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
-# eval $(minikube docker-env)
+# eval $(minikube -p minikube docker-env)
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 # export PATH="~/.dotnet/tools:$PATH"
+
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/usr/local/opt/sphinx-doc/bin:$PATH"
+
+PROMPT='
+$(kube_ps1)'$PROMPT

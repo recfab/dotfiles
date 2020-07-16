@@ -7,18 +7,15 @@
     "window.zoomLevel": 1,
     "editor.fontFamily": " Menlo, Monaco, Arial Hebrew,  'Courier New', monospace",
     "editor.formatOnSave": false,
-    "editor.tabCompletion": true,
+    "editor.tabCompletion": "on",
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
-    "workbench.colorTheme": "Shades of Purple",
     "csharp.suppressDotnetRestoreNotification": true,
     "vetur.format.defaultFormatter.js": "none",
     "editor.formatOnPaste": false,
     "editor.formatOnType": false,
-    "eslint.autoFixOnSave": true,
     "eslint.packageManager": "yarn",
-    "standard.autoFixOnSave": true,
     "todo-tree.highlights.customHighlight": {
         "TODO": {},
         "FIXME": {}
@@ -27,10 +24,25 @@
         "foreground": "green",
         "type": "none"
     },
-    "dotnet-test-explorer.autoExpandTree": true,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.editor.enablePreview": false,
     "asciidoc.asciidoctor_command": "asciidoctor -r asciidoctor-diagram",
     "asciidoc.preview.useEditorStyle": false,
     "asciidoc.use_asciidoctor_js": false,
+    "asciidoc.preview.attributes": {
+    },
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.enableEditorConfigSupport": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Shades of Purple",
+    "todo-tree.tree.showScanModeButton": false,
+    "editor.renderWhitespace": "boundary",
+    "gitlab.instanceUrl": "https://code.tiamat.cloud",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "omnisharp.useGlobalMono": "never",
+    "terminal.integrated.confirmOnExit": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "markdown.preview.scrollEditorWithPreview": false,
+    "markdown.preview.scrollPreviewWithEditor": false
 }

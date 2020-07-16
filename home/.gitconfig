@@ -6,6 +6,8 @@
 [core]
 	autocrlf = input
 	editor = code --wait
+	pager = diff-so-fancy | less -RFX
+	whitespace = blank-at-eol,tab-in-indent
 [credential]
 	helper = osxkeychain
 [diff]
@@ -18,3 +20,5 @@
 	sslVerify = false
 [mergetool]
 	keepBackup = false
+[push]
+	followTags = true
