@@ -55,6 +55,7 @@ plugins=(
   docker
   docker-compose
   git
+  git-auto-fetch
   git-extras
   kubectl
   kube-ps1

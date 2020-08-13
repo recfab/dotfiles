@@ -41,8 +41,13 @@
     "gitlab.instanceUrl": "https://code.tiamat.cloud",
     "diffEditor.ignoreTrimWhitespace": false,
     "omnisharp.useGlobalMono": "never",
-    "terminal.integrated.confirmOnExit": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "markdown.preview.scrollEditorWithPreview": false,
-    "markdown.preview.scrollPreviewWithEditor": false
+    "markdown.preview.scrollPreviewWithEditor": false,
+    "cSpell.userWords": [
+        "Autofac",
+        "Kubernetes",
+        "aspnet"
+    ],
+    "go.formatTool": "goimports"
 }
