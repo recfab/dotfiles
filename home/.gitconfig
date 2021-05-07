@@ -1,24 +1,31 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-	name = Yael Namen
-	email = yael.namen@wizards.com
+name = Yael Namen
+	email = yael.namen@icloud.com
 [core]
-	autocrlf = input
-	editor = code --wait
-	pager = diff-so-fancy | less -RFX
-	whitespace = blank-at-eol,tab-in-indent
+autocrlf = input
+editor = code --wait
+pager = diff-so-fancy | less -RFX
+whitespace = blank-at-eol,tab-in-indent
+	excludesFile = ~/.gitignore
 [credential]
-	helper = osxkeychain
+helper = osxkeychain
 [diff]
-	tool = bc3
+tool = bc3
 [merge]
-	tool = bc3
+tool = bc3
 [mergetool "bc3"]
-	trustExitCode = true
-[http "https://git.wz.hasbro.com"]
-	sslVerify = false
+trustExitCode = true
 [mergetool]
-	keepBackup = false
+keepBackup = false
 [push]
-	followTags = true
+followTags = true
+[status]
+submoduleSummary = true
+[pull]
+	rebase = true
+[init]
+	defaultBranch = trunk
+[clone]
+	defaultRemoteName = upstream

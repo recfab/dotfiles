@@ -1,16 +1,13 @@
 // Place your settings in this file to overwrite the default settings
 {
     "editor.fontSize": 14,
-    "editor.wordWrap": true,
+    "editor.wordWrap": "on",
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
-    "window.zoomLevel": 1,
     "editor.fontFamily": " Menlo, Monaco, Arial Hebrew,  'Courier New', monospace",
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.tabCompletion": "on",
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
+    "gitlens.advanced.messages": {},
     "csharp.suppressDotnetRestoreNotification": true,
     "vetur.format.defaultFormatter.js": "none",
     "editor.formatOnPaste": false,
@@ -24,30 +21,77 @@
         "foreground": "green",
         "type": "none"
     },
-    "asciidoc.asciidoctor_command": "asciidoctor -r asciidoctor-diagram",
-    "asciidoc.preview.useEditorStyle": false,
-    "asciidoc.use_asciidoctor_js": false,
-    "asciidoc.preview.attributes": {
-    },
     "omnisharp.enableRoslynAnalyzers": true,
     "omnisharp.enableEditorConfigSupport": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        // "source.fixAll.eslint": true
     },
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Shades of Purple",
     "todo-tree.tree.showScanModeButton": false,
     "editor.renderWhitespace": "boundary",
-    "gitlab.instanceUrl": "https://code.tiamat.cloud",
     "diffEditor.ignoreTrimWhitespace": false,
     "omnisharp.useGlobalMono": "never",
-    "editor.multiCursorModifier": "ctrlCmd",
     "markdown.preview.scrollEditorWithPreview": false,
     "markdown.preview.scrollPreviewWithEditor": false,
     "cSpell.userWords": [
         "Autofac",
         "Kubernetes",
-        "aspnet"
+        "aspnet",
+        "gitlab",
+        "pipelinecomponents",
+        "purescript",
+        "purs",
+        "spago",
+        "yamllint"
     ],
-    "go.formatTool": "goimports"
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "yaml.format.singleQuote": true,
+    "explorer.compactFolders": false,
+    "yaml.format.enable": false,
+    "bashIde.highlightParsingErrors": true,
+    "shellformat.flag": "-ci -sr",
+    "html.format.wrapLineLength": 0,
+    "createtmpfile.deleteOnExit": true,
+    "shellcheck.customArgs": [
+        "-x"
+    ],
+    "shellcheck.enableQuickFix": true,
+    "shellcheck.executablePath": "shellcheck",
+    "shellcheck.useWorkspaceRootAsCwd": true,
+    "editor.linkedEditing": true,
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "window.zoomLevel": 1,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        },
+        {
+            "viewType": "default",
+            "filenamePattern": "git-rebase-todo"
+        }
+    ],
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "purescript.addNpmPath": true,
+    "ruby.intellisense": "rubyLocate",
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.useLanguageServer": true,
+    "ruby.format": "rubocop",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "go.toolsManagement.autoUpdate": true,
+    "terminal.explorerKind": "external"
 }
