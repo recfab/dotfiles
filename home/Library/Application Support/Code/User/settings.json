@@ -34,17 +34,6 @@
     "omnisharp.useGlobalMono": "never",
     "markdown.preview.scrollEditorWithPreview": false,
     "markdown.preview.scrollPreviewWithEditor": false,
-    "cSpell.userWords": [
-        "Autofac",
-        "Kubernetes",
-        "aspnet",
-        "gitlab",
-        "pipelinecomponents",
-        "purescript",
-        "purs",
-        "spago",
-        "yamllint"
-    ],
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
     "yaml.format.singleQuote": true,
@@ -93,5 +82,8 @@
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "go.toolsManagement.autoUpdate": true,
-    "terminal.explorerKind": "external"
+    "terminal.explorerKind": "external",
+    "cSpell.dictionaryDefinitions": [
+        {}
+    ]
 }

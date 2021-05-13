@@ -29,3 +29,5 @@ submoduleSummary = true
 	defaultBranch = trunk
 [clone]
 	defaultRemoteName = upstream
+[alias]
+	mwps = push -o merge_request.create -o merge_request.merge_when_pipeline_succeeds
