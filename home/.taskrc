@@ -30,4 +30,3 @@ data.location=~/.task
 #include /usr/local/Cellar/task/2.5.3/share/doc/task/rc/no-color.theme
 
 context.work=project:Work
-context=work
