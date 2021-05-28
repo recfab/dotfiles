@@ -21,7 +21,7 @@ data.location=~/.task
 #include /usr/local/Cellar/task/2.5.3/share/doc/task/rc/dark-red-256.theme
 #include /usr/local/Cellar/task/2.5.3/share/doc/task/rc/dark-green-256.theme
 #include /usr/local/Cellar/task/2.5.3/share/doc/task/rc/dark-blue-256.theme
-#include /usr/local/Cellar/task/2.5.3/share/doc/task/rc/dark-violets-256.theme
+include /usr/local/Cellar/task/2.5.3/share/doc/task/rc/dark-violets-256.theme
 #include /usr/local/Cellar/task/2.5.3/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/local/Cellar/task/2.5.3/share/doc/task/rc/dark-gray-256.theme
 #include /usr/local/Cellar/task/2.5.3/share/doc/task/rc/dark-gray-blue-256.theme
@@ -30,3 +30,9 @@ data.location=~/.task
 #include /usr/local/Cellar/task/2.5.3/share/doc/task/rc/no-color.theme
 
 context.work=project:Work
+uda.reviewed.type=date
+uda.reviewed.label=Reviewed
+report._reviewed.description=Tasksh review report.  Adjust the filter to your needs.
+report._reviewed.columns=uuid
+report._reviewed.sort=reviewed+,modified+
+report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )
