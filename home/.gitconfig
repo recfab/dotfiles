@@ -1,0 +1,33 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+name = Yael Namen
+email = yael.namen@icloud.com
+[core]
+autocrlf = input
+editor = code --wait
+pager = diff-so-fancy | less -RFX
+whitespace = blank-at-eol,tab-in-indent
+excludesFile = ~/.gitignore
+[credential]
+helper = osxkeychain
+[diff]
+tool = bc3
+[merge]
+tool = bc3
+[mergetool "bc3"]
+trustExitCode = true
+[mergetool]
+keepBackup = false
+[push]
+followTags = true
+[status]
+submoduleSummary = true
+[pull]
+rebase = true
+[init]
+defaultBranch = main
+[clone]
+defaultRemoteName = origin
+[alias]
+mwps = push -o merge_request.create -o merge_request.merge_when_pipeline_succeeds

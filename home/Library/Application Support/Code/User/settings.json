@@ -1,0 +1,86 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.fontSize": 14,
+  "editor.wordWrap": "on",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.fontFamily": " Menlo, Monaco, Arial Hebrew,  'Courier New', monospace",
+  "editor.formatOnSave": true,
+  "editor.tabCompletion": "on",
+  "gitlens.advanced.messages": {},
+  "csharp.suppressDotnetRestoreNotification": true,
+  "vetur.format.defaultFormatter.js": "none",
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "eslint.packageManager": "yarn",
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {},
+    "FIXME": {}
+  },
+  "todo-tree.highlights.defaultHighlight": {
+    "foreground": "green",
+    "type": "none"
+  },
+  "omnisharp.enableRoslynAnalyzers": true,
+  "omnisharp.enableEditorConfigSupport": true,
+  "editor.codeActionsOnSave": {
+    // "source.fixAll.eslint": true
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Shades of Purple",
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.renderWhitespace": "boundary",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "omnisharp.useGlobalMono": "never",
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.scrollPreviewWithEditor": false,
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
+  "yaml.format.singleQuote": true,
+  "explorer.compactFolders": false,
+  "yaml.format.enable": false,
+  "bashIde.highlightParsingErrors": true,
+  "shellformat.flag": "-ci -sr",
+  "html.format.wrapLineLength": 0,
+  "createtmpfile.deleteOnExit": true,
+  "shellcheck.customArgs": [
+    "-x"
+  ],
+  "shellcheck.enableQuickFix": true,
+  "shellcheck.executablePath": "shellcheck",
+  "shellcheck.useWorkspaceRootAsCwd": true,
+  "editor.linkedEditing": true,
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "window.zoomLevel": 1,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb",
+    "git-rebase-todo": "default"
+  },
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "purescript.addNpmPath": true,
+  "ruby.intellisense": "rubyLocate",
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.useLanguageServer": true,
+  "ruby.format": "rubocop",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "go.toolsManagement.autoUpdate": true,
+  "terminal.explorerKind": "external",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "cSpell.userWords": [
+    "graknlabs",
+    "nofooter"
+  ]
+}
