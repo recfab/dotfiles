@@ -105,7 +105,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
 
 eval "$(asdf exec direnv hook zsh)"
 direnv() { asdf exec direnv "$@"; }
@@ -130,3 +130,5 @@ compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="$HOME/.poetry/bin:$PATH"
