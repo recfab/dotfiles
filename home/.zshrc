@@ -104,8 +104,13 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gs="git status"
 
-# . $HOME/.asdf/asdf.sh
+alias gpmr='git push --set-upstream origin $(git_current_branch) --push-option merge_request.create'
+alias k="kubectl"
+alias tf="terraform"
+alias tfval="terraform validate"
+alias tfpo="terraform plan -out=plan.tfplan"
 
 eval "$(asdf exec direnv hook zsh)"
 direnv() { asdf exec direnv "$@"; }
@@ -120,6 +125,7 @@ export PATH="$GOPATH/bin:$PATH"
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/recfab/.zshrc'
@@ -130,5 +136,3 @@ compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export PATH="$HOME/.poetry/bin:$PATH"

@@ -20,3 +20,4 @@ softlink() {
 softlink '.zshrc'
 softlink '.gitconfig'
 softlink '.p10k.zsh'
+softlink 'com.googlecode.iterm2.plist'
