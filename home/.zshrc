@@ -43,6 +43,7 @@ alias tf="terraform"
 alias tfval="terraform validate"
 alias tfpo="terraform plan -out=plan.tfplan"
 
+alias date-id="date '+%Y%m%d%H%M%S'"
 alias date-iso="date '+%Y-%m-%d'"
 alias date-long="date '+%A, %B %e, %Y'"
 
