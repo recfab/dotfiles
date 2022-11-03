@@ -56,6 +56,30 @@ shell_info() {
   echo "kubie depth: $(kubie info depth)"
 }
 
+use-tabletop-dev () {
+  export AWS_PROFILE=wotc-tabletop-dev
+}
+
+login-tabletop-dev () {
+  saml2aws login --profile wotc-tabletop-dev --role arn:aws:iam::896850791949:role/Administrator --skip-prompt;
+}
+
+use-tabletop-prod () {
+  export AWS_PROFILE=wotc-tabletop-prod
+}
+
+login-tabletop-prod () {
+  saml2aws login --profile wotc-tabletop-prod --role arn:aws:iam::647651886844:role/Administrator --skip-prompt;
+}
+
+use-dps-prod () {
+  export AWS_PROFILE=wotc-dps-prod
+}
+
+login-dps-prod () {
+  saml2aws login --profile wotc-dps-prod --role arn:aws:iam::385520225527:role/Administrator --skip-prompt;
+}
+
 eval "$(asdf exec direnv hook zsh)"
 direnv() { asdf exec direnv "$@"; }
 
