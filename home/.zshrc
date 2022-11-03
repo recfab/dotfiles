@@ -13,6 +13,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
   asdf
+  aws
   colored-man-pages
   docker
   # docker-compose
