@@ -17,7 +17,10 @@ softlink() {
   ln -sf "$this_dir/home/$target" "$HOME/$target"
 }
 
+mkdir -p "$HOME/bin"
+
 softlink '.zshrc'
 softlink '.gitconfig'
 softlink '.p10k.zsh'
 softlink 'com.googlecode.iterm2.plist'
+softlink 'bin/update-eks-kubeconfigs.sh'

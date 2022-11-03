@@ -91,6 +91,8 @@ export PATH="/usr/local/opt/make/libexec/gnubin:/usr/local/opt/openssl/bin:$PATH
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
+export PATH="$HOME/bin:$PATH"
+
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
