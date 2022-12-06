@@ -57,6 +57,32 @@ shell_info() {
   echo "kubie depth: $(kubie info depth)"
 }
 
+# AWS Account helpers
+## infra accounts
+use-infrastucture-sandbox () {
+  export AWS_PROFILE=wotc-infrastucture-sandbox
+}
+
+login-infrastucture-sandbox () {
+  saml2aws login --profile wotc-infrastucture-sandbox --role arn:aws:iam::792698692666:role/Administrator --skip-prompt;
+}
+
+use-infrastucture-dev () {
+  export AWS_PROFILE=wotc-infrastucture-dev
+}
+
+login-infrastucture-dev () {
+  saml2aws login --profile wotc-infrastucture-dev --role arn:aws:iam::580722926280:role/Administrator --skip-prompt;
+}
+
+use-infrastucture-prod () {
+  export AWS_PROFILE=wotc-infrastucture-prod
+}
+
+login-infrastucture-prod () {
+  saml2aws login --profile wotc-infrastucture-prod --role arn:aws:iam::599274397580:role/Administrator --skip-prompt;
+}
+## tabletop accounts
 use-tabletop-dev () {
   export AWS_PROFILE=wotc-tabletop-dev
 }
@@ -73,6 +99,7 @@ login-tabletop-prod () {
   saml2aws login --profile wotc-tabletop-prod --role arn:aws:iam::647651886844:role/Administrator --skip-prompt;
 }
 
+## dps acounts
 use-dps-prod () {
   export AWS_PROFILE=wotc-dps-prod
 }
@@ -80,6 +107,7 @@ use-dps-prod () {
 login-dps-prod () {
   saml2aws login --profile wotc-dps-prod --role arn:aws:iam::385520225527:role/Administrator --skip-prompt;
 }
+# end AWS Account helpers
 
 eval "$(asdf exec direnv hook zsh)"
 direnv() { asdf exec direnv "$@"; }
