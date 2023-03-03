@@ -128,6 +128,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/Users/nameny/Library/Python/3.9/bin:$PATH"
 export PATH="$PATH:/Users/nameny/.dotnet/tools"
+export PATH="$HOME/.local/bin:$PATH"
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/recfab/.zshrc'
