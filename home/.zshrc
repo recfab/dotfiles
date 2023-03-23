@@ -27,6 +27,9 @@ plugins=(
   rust
 )
 
+# Setup FPATH so that completions work. Must be before sourcing `oh-my-zsh.sh` because that script automatically calls compinit
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -131,7 +134,7 @@ export PATH="$PATH:/Users/nameny/.dotnet/tools"
 export PATH="$HOME/.local/bin:$PATH"
 
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/recfab/.zshrc'
+zstyle :compinstall filename '/home/yael/.zshrc'
 
 autoload -Uz compinit
 compinit
