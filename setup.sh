@@ -20,7 +20,7 @@ softlink() {
 mkdir -p "$HOME/bin"
 
 softlink '.zshrc'
-softlink '.gitconfig'
+# softlink '.gitconfig'
 softlink '.p10k.zsh'
 softlink '.fzf.zsh'
 softlink 'com.googlecode.iterm2.plist'
