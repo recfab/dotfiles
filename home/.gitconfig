@@ -2,13 +2,14 @@
 [user]
 # Please adapt and uncomment the following lines:
 name = Yael Namen
-email = yael.namen@icloud.com
+	email = ynamen@hubspot.com
 [core]
 autocrlf = input
 editor = code --wait
 pager = diff-so-fancy | less -RFX
 whitespace = blank-at-eol,tab-in-indent
 excludesFile = ~/.gitignore
+	hooksPath = /Users/ynamen/.git_hooks
 [credential]
 helper = osxkeychain
 [diff]
