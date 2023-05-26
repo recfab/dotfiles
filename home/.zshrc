@@ -45,7 +45,8 @@ else
 fi
 
 alias gpmr='git push --set-upstream origin $(git_current_branch) --push-option merge_request.create'
-alias k="kubectl"
+alias k="hs-kubectl"
+alias di="kubectl-datainfra"
 alias tf="terraform"
 alias tfval="terraform validate"
 alias tfpo="terraform plan -out=plan.tfplan"
@@ -100,3 +101,7 @@ compinit
 . ~/.hubspot/shellrc
 
 # export PATH="/opt/homebrew/opt/hshs/bin:$PATH"
+export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
+export GOPRIVATE="git.hubteam.com"
+
+export PATH="$(go env GOPATH)/src/git.hubteam.com/hubspot/vitess-upstream/bin:$PATH"

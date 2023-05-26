@@ -13,7 +13,7 @@ excludesFile = ~/.gitignore
 [credential]
 helper = osxkeychain
 [diff]
-tool = bc3
+	tool = bc
 [merge]
 tool = bc3
 [mergetool "bc3"]
@@ -32,3 +32,5 @@ defaultBranch = main
 defaultRemoteName = origin
 [alias]
 mwps = push -o merge_request.create -o merge_request.merge_when_pipeline_succeeds
+[url "git@git.hubteam.com:"]
+	insteadOf = https://git.hubteam.com
