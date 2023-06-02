@@ -28,6 +28,7 @@ plugins=(
   git-extras
   kubectl
   rust
+  zsh-autosuggestions
 )
 
 # Setup FPATH so that completions work. Must be before sourcing `oh-my-zsh.sh` because that script automatically calls compinit
@@ -55,6 +56,10 @@ alias tflock="terraform providers lock -platform=windows_amd64 -platform=darwin_
 alias date-id="date '+%Y%m%d%H%M%S'"
 alias date-iso="date '+%Y-%m-%d'"
 alias date-long="date '+%A, %B %e, %Y'"
+
+personal-namespace() {
+  k use iad03-test -n vt-ynamen
+}
 
 shell_info() {
   echo "AWS profile: $AWS_PROFILE"
