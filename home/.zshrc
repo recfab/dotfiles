@@ -20,14 +20,14 @@ plugins=(
   colored-man-pages
   docker
   # docker-compose
-  doctl
+  # doctl
   dotnet
   fzf
   git
   git-auto-fetch
   git-extras
   kubectl
-  rust
+  # rust
   zsh-autosuggestions
 )
 
@@ -45,20 +45,32 @@ else
   export EDITOR='code --wait'
 fi
 
-alias gpmr='git push --set-upstream origin $(git_current_branch) --push-option merge_request.create'
+# alias gpmr='git push --set-upstream origin $(git_current_branch) --push-option merge_request.create'
+
 alias k="hs-kubectl"
+alias ke="k exec -it"
+alias kns="k use iad03-test -n"
+alias knsp="kns vt-$USER"
+alias knsc="kns vt-chaos"
 alias di="kubectl-datainfra"
 alias tf="terraform"
 alias tfval="terraform validate"
 alias tfpo="terraform plan -out=plan.tfplan"
 alias tflock="terraform providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64"
 
+alias gdtd="git difftool --dir-diff"
+
 alias date-id="date '+%Y%m%d%H%M%S'"
 alias date-iso="date '+%Y-%m-%d'"
 alias date-long="date '+%A, %B %e, %Y'"
 
-personal-namespace() {
-  k use iad03-test -n vt-ynamen
+gh-ref() {
+  echo "$1" | awk -F'/' -vOFS='' '{ print $(NF-3),"/",$(NF-2),"#",$(NF) }'
+}
+
+gh-ref-link() {
+  ref=$(gh-ref "$1")
+  echo "[$ref]($1)"
 }
 
 shell_info() {
@@ -110,3 +122,5 @@ export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
 export GOPRIVATE="git.hubteam.com"
 
 export PATH="$(go env GOPATH)/src/git.hubteam.com/hubspot/vitess-upstream/bin:$PATH"
+# export PATH="$HOME/Code/vitess-internal/python/tls_vtctlclient/.venv/bin:$PATH"
+export PATH="$HOME/bin:$PATH"

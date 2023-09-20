@@ -17,6 +17,18 @@ softlink() {
   ln -sf "$this_dir/home/$target" "$HOME/$target"
 }
 
+softlink_bin() {
+  target="$1"
+
+  if [[ -e "$HOME/bin/$target" ]]; then
+    echo "Backing up old version of $target"
+    mv "$HOME/bin/$target" "$HOME/bin/$target.bak"
+  fi
+
+  echo "Linking $target"
+  ln -sf "$this_dir/home/bin/${target}.sh" "$HOME/bin/$target"
+}
+
 mkdir -p "$HOME/bin"
 
 softlink '.zshrc'
@@ -24,5 +36,7 @@ softlink '.zshrc'
 softlink '.p10k.zsh'
 softlink '.fzf.zsh'
 softlink 'com.googlecode.iterm2.plist'
-softlink 'bin/update-eks-kubeconfigs.sh'
-softlink 'bin/md-link-from-jira.sh'
+
+# softlink_bin 'update-eks-kubeconfigs'
+# softlink 'bin/md-link-from-jira.sh'
+softlink_bin 'tls-vtctlclient'
