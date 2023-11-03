@@ -52,6 +52,7 @@ alias ke="k exec -it"
 alias kns="k use iad03-test -n"
 alias knsp="kns vt-$USER"
 alias knsc="kns vt-chaos"
+alias kgetks-failed="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
 alias di="kubectl-datainfra"
 alias tf="terraform"
 alias tfval="terraform validate"
@@ -64,12 +65,23 @@ alias date-id="date '+%Y%m%d%H%M%S'"
 alias date-iso="date '+%Y-%m-%d'"
 alias date-long="date '+%A, %B %e, %Y'"
 
+alias v="tls-vtctlclient"
+
 gh-ref() {
   echo "$1" | awk -F'/' -vOFS='' '{ print $(NF-3),"/",$(NF-2),"#",$(NF) }'
 }
 
 gh-ref-link() {
   ref=$(gh-ref "$1")
+  echo "[$ref]($1)"
+}
+
+jira-ref() {
+  echo "$1" | awk -F'/' -vOFS='' '{ print $(NF) }'
+}
+
+jira-ref-link() {
+  ref=$(jira-ref "$1")
   echo "[$ref]($1)"
 }
 
@@ -122,5 +134,4 @@ export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
 export GOPRIVATE="git.hubteam.com"
 
 export PATH="$(go env GOPATH)/src/git.hubteam.com/hubspot/vitess-upstream/bin:$PATH"
-# export PATH="$HOME/Code/vitess-internal/python/tls_vtctlclient/.venv/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
