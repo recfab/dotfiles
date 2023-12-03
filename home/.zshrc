@@ -134,6 +134,9 @@ export PATH="/Users/nameny/Library/Python/3.9/bin:$PATH"
 export PATH="$PATH:/Users/nameny/.dotnet/tools"
 export PATH="$HOME/.local/bin:$PATH"
 
+# shellcheck source=~/.cargo/env
+source "$HOME/.cargo/env"
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/yael/.zshrc'
 
