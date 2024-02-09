@@ -39,3 +39,4 @@ softlink 'com.googlecode.iterm2.plist'
 
 # softlink_bin 'update-eks-kubeconfigs'
 # softlink 'bin/md-link-from-jira.sh'
+softlink_bin 'create-temp-keyspaceshard'

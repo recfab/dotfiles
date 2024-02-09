@@ -49,10 +49,15 @@ fi
 
 alias k="hs-kubectl"
 alias ke="k exec -it"
-alias kns="k use iad03-test -n"
-alias knsp="kns vt-$USER"
+alias nvto='kubectl get pods -l component=vitess-operator -o name | cut -d / -f 2'
+alias vtol='kubectl logs -f $(nvto) -c vto'
+alias kns="k config set-context --current --namespace"
 alias knsc="kns vt-chaos"
+alias knsg="kns vt-green"
+alias knsb="kns vt-blue"
+alias knsp="k use iad03-test -n vt-$USER"
 alias kgetks-failed="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
+alias kgetvtgp-failed="k get vtgp -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
 alias kgetks-wide="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase,StorageCls:.spec.storageClass,PerfCls:.spec.performanceClass,InMigration:.spec.inMigration
 "
 alias di="kubectl-datainfra"
