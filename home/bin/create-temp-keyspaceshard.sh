@@ -1,7 +1,15 @@
 #!/bin/bash
 set -euo pipefail
 
-GIT_ROOT=$(git rev-parse --show-toplevel)
+# I created this script while working on the gp3 rollout. I had to create a lot
+# of keyspaceshards because of the 6 hour cooldown. I think the script is useful
+# but it was a bit of a pathological case.
+# 
+# Potential improvements
+# - connect to whatever cleans up chaos test keyspaces
+# - additional metadata: user, issue number, expiry
+
+# GIT_ROOT=$(git rev-parse --show-toplevel)
 VITESS_DEPLOYER_ROOT="$(go env GOPATH)/src/git.hubteam.com/hubspot/vitess-deployer"
 USER="${1:-$(whoami)}"
 
