@@ -60,6 +60,7 @@ alias kgetks-failed="k get ks -ocustom-columns=Name:.metadata.name,Status:.statu
 alias kgetvtgp-failed="k get vtgp -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
 alias kgetks-wide="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase,StorageCls:.spec.storageClass,PerfCls:.spec.performanceClass,InMigration:.spec.inMigration
 "
+alias kyaml="k get -o yaml"
 alias di="kubectl-datainfra"
 alias tf="terraform"
 alias tfval="terraform validate"
