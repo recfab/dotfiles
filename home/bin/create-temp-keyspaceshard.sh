@@ -18,7 +18,7 @@ unixtime=$(date +%s)
 export keyspace_name="${formatted_username}Temp${unixtime}"
 lower_keyspace_name=$(echo "$keyspace_name" | awk '{ print tolower($0) }')
 export keyspaceshard_name="$lower_keyspace_name-0"
-export namespace="vt-green"
+export namespace="vt-$USER"
 
 base_file="$VITESS_DEPLOYER_ROOT/deploy/testkeyspaceshard.yaml"
 

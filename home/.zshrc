@@ -56,6 +56,12 @@ alias knsc="kns vt-chaos"
 alias knsg="kns vt-green"
 alias knsb="kns vt-blue"
 alias knsp="k use iad03-test -n vt-$USER"
+
+export COL_CRITICALITY='Criticality:".metadata.annotations.vitess\.hubspot\.com/reliability-qos"'
+export COL_PHASE='Status:.status.phase'
+export COL_STORAGE_CLASS='StorageClass:.spec.storageClass'
+export COL_PERF_CLASS='PerfClass:.spec.performanceClass'
+
 alias kgetks-failed="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
 alias kgetvtgp-failed="k get vtgp -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
 alias kgetks-wide="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase,StorageCls:.spec.storageClass,PerfCls:.spec.performanceClass,InMigration:.spec.inMigration
@@ -66,6 +72,12 @@ alias tf="terraform"
 alias tfval="terraform validate"
 alias tfpo="terraform plan -out=plan.tfplan"
 alias tflock="terraform providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64"
+
+function kgetks-not-ready() {
+  keyspace="$1"
+  ns="$2"
+  k get pods -lkeyspace=$keyspace -n "$ns" -o jsonpath='{.items[*].status.containerStatuses[?(@.ready == false)] }' | jq
+}
 
 alias gdtd="git difftool --dir-diff"
 
