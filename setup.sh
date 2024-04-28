@@ -39,4 +39,22 @@ softlink 'com.googlecode.iterm2.plist'
 
 # softlink_bin 'update-eks-kubeconfigs'
 # softlink 'bin/md-link-from-jira.sh'
-softlink_bin 'create-temp-keyspaceshard'
+# softlink_bin 'create-temp-keyspaceshard'
+
+# git config
+echo "Configuring git"
+git config --global diff.tool bc
+git config --global difftool.bc.trustExitCode true
+
+git config --global merge.tool bc
+git config --global mergetool.bc.trustExitCode true
+git config --global mergetool.keepBackup false
+
+git config --global core.autocrlf input
+git config --global core.editor 'code --wait'
+git config --global core.pager 'diff-so-fancy | less -RFX'
+git config --global core.whitespace 'blank-at-eol,tab-in-indent'
+
+git config --global status.submoduleSummary true
+git config --global push.followTags true
+git config --global pull.rebase true
