@@ -47,6 +47,7 @@ fi
 
 # alias gpmr='git push --set-upstream origin $(git_current_branch) --push-option merge_request.create'
 
+alias du="du -I'.git' -h -d1 ."
 alias k="hs-kubectl"
 alias ke="k exec -it"
 alias nvto='kubectl get pods -l component=vitess-operator -o name | cut -d / -f 2'
