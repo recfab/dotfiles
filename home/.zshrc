@@ -58,6 +58,8 @@ alias knsg="kns vt-green"
 alias knsb="kns vt-blue"
 alias knsp="k use iad03-test -n vt-$USER"
 
+export COL_NAME='Name:.metadata.name'
+export COL_OWNING_TEAM='OwningTeam:.spec.owningTeam'
 export COL_CRITICALITY='Criticality:".metadata.annotations.vitess\.hubspot\.com/reliability-qos"'
 export COL_PHASE='Status:.status.phase'
 export COL_STORAGE_CLASS='StorageClass:.spec.storageClass'
@@ -136,7 +138,7 @@ export PATH="$PATH:/Users/nameny/.dotnet/tools"
 export PATH="$HOME/.local/bin:$PATH"
 
 # shellcheck source=~/.cargo/env
-source "$HOME/.cargo/env"
+# source "$HOME/.cargo/env"
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/yael/.zshrc'
