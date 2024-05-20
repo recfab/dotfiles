@@ -152,7 +152,7 @@ compinit
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Added by nex: https://git.hubteam.com/HubSpot/nex
-. ~/.hubspot/shellrc
+# . ~/.hubspot/shellrc
 
 # export PATH="/opt/homebrew/opt/hshs/bin:$PATH"
 export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
