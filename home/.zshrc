@@ -47,29 +47,29 @@ fi
 # alias gpmr='git push --set-upstream origin $(git_current_branch) --push-option merge_request.create'
 
 alias du="du -I'.git' -h -d1 ."
-alias k="hs-kubectl"
+alias k="kubectl"
 alias ke="k exec -it"
-alias nvto='kubectl get pods -l component=vitess-operator -o name | cut -d / -f 2'
-alias vtol='kubectl logs -f $(nvto) -c vto'
+# alias nvto='kubectl get pods -l component=vitess-operator -o name | cut -d / -f 2'
+# alias vtol='kubectl logs -f $(nvto) -c vto'
 alias kns="k config set-context --current --namespace"
-alias knsc="kns vt-chaos"
-alias knsg="kns vt-green"
-alias knsb="kns vt-blue"
-alias knsp="k use iad03-test -n vt-$USER"
+# alias knsc="kns vt-chaos"
+# alias knsg="kns vt-green"
+# alias knsb="kns vt-blue"
+# alias knsp="k use iad03-test -n vt-$USER"
 
 export COL_NAME='Name:.metadata.name'
-export COL_OWNING_TEAM='OwningTeam:.spec.owningTeam'
-export COL_CRITICALITY='Criticality:".metadata.annotations.vitess\.hubspot\.com/reliability-qos"'
+# export COL_OWNING_TEAM='OwningTeam:.spec.owningTeam'
+# export COL_CRITICALITY='Criticality:".metadata.annotations.vitess\.hubspot\.com/reliability-qos"'
 export COL_PHASE='Status:.status.phase'
 export COL_STORAGE_CLASS='StorageClass:.spec.storageClass'
 export COL_PERF_CLASS='PerfClass:.spec.performanceClass'
 
-alias kgetks-failed="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
-alias kgetvtgp-failed="k get vtgp -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
-alias kgetks-wide="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase,StorageCls:.spec.storageClass,PerfCls:.spec.performanceClass,InMigration:.spec.inMigration
-"
+# alias kgetks-failed="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
+# alias kgetvtgp-failed="k get vtgp -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
+# alias kgetks-wide="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase,StorageCls:.spec.storageClass,PerfCls:.spec.performanceClass,InMigration:.spec.inMigration"
+
 alias kyaml="k get -o yaml"
-alias di="kubectl-datainfra"
+# alias di="kubectl-datainfra"
 alias tf="terraform"
 alias tfval="terraform validate"
 alias tfpo="terraform plan -out=plan.tfplan"
@@ -87,7 +87,7 @@ alias date-id="date '+%Y%m%d%H%M%S'"
 alias date-iso="date '+%Y-%m-%d'"
 alias date-long="date '+%A, %B %e, %Y'"
 
-alias v="tls-vtctlclient"
+# alias v="tls-vtctlclient"
 
 gh-ref() {
   echo "$1" | awk -F'/' -vOFS='' '{ print $(NF-3),"/",$(NF-2),"#",$(NF) }'
@@ -123,8 +123,8 @@ direnv() { asdf exec direnv "$@"; }
 
 export PATH="/usr/local/opt/make/libexec/gnubin:/usr/local/opt/openssl/bin:$PATH"
 
-export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:$PATH"
+# export GOPATH="$HOME/go"
+# export PATH="$GOPATH/bin:$PATH"
 
 export PATH="$HOME/bin:$PATH"
 
@@ -155,9 +155,24 @@ compinit
 # . ~/.hubspot/shellrc
 
 # export PATH="/opt/homebrew/opt/hshs/bin:$PATH"
-export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
-export GOROOT
-export GOPRIVATE="git.hubteam.com"
+# export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
+# export GOROOT
+# export GOPRIVATE="git.hubteam.com"
 
-export PATH="$(go env GOPATH)/src/git.hubteam.com/hubspot/vitess-upstream/bin:$PATH"
-export PATH="$(go env GOPATH)/src/git.hubteam.com/hubspotprotected/vitess-internal/python/tls_vtctlclient:$PATH"
+# export PATH="$(go env GOPATH)/src/git.hubteam.com/hubspot/vitess-upstream/bin:$PATH"
+# export PATH="$(go env GOPATH)/src/git.hubteam.com/hubspotprotected/vitess-internal/python/tls_vtctlclient:$PATH"
+# source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/yaelnamen/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yaelnamen/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/yaelnamen/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/yaelnamen/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
