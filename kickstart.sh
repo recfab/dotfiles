@@ -56,5 +56,7 @@ git config --global core.pager 'diff-so-fancy | less -RFX'
 git config --global core.whitespace 'blank-at-eol,tab-in-indent'
 
 git config --global status.submoduleSummary true
+git config --global submodule.recurse true
+
 git config --global push.followTags true
 git config --global pull.rebase true
