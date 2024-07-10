@@ -176,3 +176,7 @@ eval "$(jenv init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Ant
+export ANT_HOME="$HOME/projects/apache-ant-1.10.14"
+export PATH="$ANT_HOME/bin:$PATH"
