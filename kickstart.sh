@@ -38,8 +38,8 @@ softlink '.fzf.zsh'
 softlink 'com.googlecode.iterm2.plist'
 
 # softlink_bin 'update-eks-kubeconfigs'
-# softlink 'bin/md-link-from-jira.sh'
 # softlink_bin 'create-temp-keyspaceshard'
+softlink_bin 'md-link-from-jira'
 
 # git config
 echo "Configuring git"
