@@ -43,6 +43,8 @@ softlink_bin 'md-link-from-jira'
 
 # git config
 echo "Configuring git"
+git config --global init.defaultBranch main
+
 git config --global diff.tool bc
 git config --global difftool.bc.trustExitCode true
 
@@ -59,4 +61,4 @@ git config --global status.submoduleSummary true
 git config --global submodule.recurse true
 
 git config --global push.followTags true
-git config --global pull.rebase true
+git config --global pull.rebase false
