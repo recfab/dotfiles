@@ -43,6 +43,8 @@ softlink_bin 'md-link-from-jira'
 
 # git config
 echo "Configuring git"
+git config --global init.defaultBranch main
+
 git config --global diff.tool bc
 git config --global difftool.bc.trustExitCode true
 
