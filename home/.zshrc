@@ -11,6 +11,7 @@ eval $(/opt/homebrew/bin/brew shellenv)
 
 export ZSH=~/.oh-my-zsh
 
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
@@ -46,7 +47,8 @@ fi
 
 # alias gpmr='git push --set-upstream origin $(git_current_branch) --push-option merge_request.create'
 
-alias du="du -I'.git' -h -d1 ."
+# TODO A lot of this is HubSpot stuff that can be archived
+alias du="du -I'.git' -h -d1"
 alias k="kubectl"
 alias ke="k exec -it"
 # alias nvto='kubectl get pods -l component=vitess-operator -o name | cut -d / -f 2'
@@ -70,24 +72,31 @@ export COL_PERF_CLASS='PerfClass:.spec.performanceClass'
 
 alias kyaml="k get -o yaml"
 # alias di="kubectl-datainfra"
-alias tf="terraform"
-alias tfval="terraform validate"
-alias tfpo="terraform plan -out=plan.tfplan"
-alias tflock="terraform providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64"
+# alias tf="terraform"
+# alias tfval="terraform validate"
+# alias tfpo="terraform plan -out=plan.tfplan"
+# alias tflock="terraform providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64"
+# alias v="tls-vtctlclient"
 
-function kgetks-not-ready() {
-  keyspace="$1"
-  ns="$2"
-  k get pods -lkeyspace=$keyspace -n "$ns" -o jsonpath='{.items[*].status.containerStatuses[?(@.ready == false)] }' | jq
-}
+# function kgetks-not-ready() {
+#   keyspace="$1"
+#   ns="$2"
+#   k get pods -lkeyspace=$keyspace -n "$ns" -o jsonpath='{.items[*].status.containerStatuses[?(@.ready == false)] }' | jq
+# }
+
+## Crio
+alias auth="gcloud auth login --update-adc; npx google-artifactregistry-auth;"
+alias sql-proxy-prod-us="cloud_sql_proxy -instances=crio-canada:us-east1:crio-mysql=tcp:3307"
+alias sql-proxy-qa="cloud_sql_proxy -instances=crio-dev-267118:us-east1:dev-mysql=tcp:3307"
+## /Crio
 
 alias gdtd="git difftool --dir-diff"
+alias gfix="git commit --fixup HEAD"
 
 alias date-id="date '+%Y%m%d%H%M%S'"
 alias date-iso="date '+%Y-%m-%d'"
 alias date-long="date '+%A, %B %e, %Y'"
 
-# alias v="tls-vtctlclient"
 
 gh-ref() {
   echo "$1" | awk -F'/' -vOFS='' '{ print $(NF-3),"/",$(NF-2),"#",$(NF) }'

@@ -59,4 +59,4 @@ git config --global status.submoduleSummary true
 git config --global submodule.recurse true
 
 git config --global push.followTags true
-git config --global pull.rebase true
+git config --global pull.rebase false
