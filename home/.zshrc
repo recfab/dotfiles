@@ -88,6 +88,7 @@ alias kyaml="k get -o yaml"
 alias auth="gcloud auth login --update-adc; npx google-artifactregistry-auth;"
 alias sql-proxy-prod-us="cloud_sql_proxy -instances=crio-canada:us-east1:crio-mysql=tcp:3307"
 alias sql-proxy-qa="cloud_sql_proxy -instances=crio-dev-267118:us-east1:dev-mysql=tcp:3307"
+alias pf-crio-auth="kubectl -n edc port-forward deploy/crio-authentication 8081:8080"
 ## /Crio
 
 alias gdtd="git difftool --dir-diff"
