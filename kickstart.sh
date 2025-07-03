@@ -36,9 +36,8 @@ softlink '.zshrc'
 softlink '.p10k.zsh'
 softlink '.fzf.zsh'
 softlink 'com.googlecode.iterm2.plist'
+softlink '.config/mise'
 
-# softlink_bin 'update-eks-kubeconfigs'
-# softlink_bin 'create-temp-keyspaceshard'
 softlink_bin 'md-link-from-jira'
 
 # git config
