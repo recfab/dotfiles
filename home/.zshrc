@@ -29,6 +29,7 @@ plugins=(
   kubectl
   # rust
   zsh-autosuggestions
+  mvn
 )
 plugins+=(zsh-better-npm-completion)
 
@@ -90,6 +91,7 @@ alias auth="gcloud auth login --update-adc; npx google-artifactregistry-auth;"
 alias sql-proxy-prod-us="cloud_sql_proxy -instances=crio-canada:us-east1:crio-mysql=tcp:3307"
 alias sql-proxy-qa="cloud_sql_proxy -instances=crio-dev-267118:us-east1:dev-mysql=tcp:3307"
 alias pf-crio-auth="kubectl -n edc port-forward deploy/crio-authentication 8081:8080"
+alias pf-recruitment-api="kubectl -n recruitment-api port-forward deploy/recruitment-api 8082:8080"
 ## /Crio
 
 alias gdtd="git difftool --dir-diff"
@@ -98,6 +100,10 @@ alias gfix="git commit --fixup HEAD"
 alias date-id="date '+%Y%m%d%H%M%S'"
 alias date-iso="date '+%Y-%m-%d'"
 alias date-long="date '+%A, %B %e, %Y'"
+
+function current_quarter() {
+  date +"%Y %m" | awk '{printf ("%4d-Q%1d\n", $1, ($2/4)+1)}'
+}
 
 
 gh-ref() {
