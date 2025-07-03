@@ -30,6 +30,7 @@ plugins=(
   # rust
   zsh-autosuggestions
 )
+plugins+=(zsh-better-npm-completion)
 
 # Setup FPATH so that completions work. Must be before sourcing `oh-my-zsh.sh` because that script automatically calls compinit
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
