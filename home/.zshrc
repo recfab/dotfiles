@@ -195,3 +195,8 @@ if [ -x "$(command -v uv)" ]; then
   eval "$(uv generate-shell-completion zsh)"
   eval "$(uvx --generate-shell-completion zsh)"
 fi
+
+# mise
+if [ -x "$(command -v mise)" ]; then
+  eval "$(mise activate zsh)"
+fi
