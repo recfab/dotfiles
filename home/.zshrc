@@ -15,7 +15,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
-  asdf
+  # asdf
   aws
   colored-man-pages
   docker
@@ -133,8 +133,8 @@ shell_info() {
   echo "kubie depth: $(kubie info depth)"
 }
 
-eval "$(asdf exec direnv hook zsh)"
-direnv() { asdf exec direnv "$@"; }
+# eval "$(asdf exec direnv hook zsh)"
+# direnv() { asdf exec direnv "$@"; }
 
 # export JAVA_HOME=$(/usr/libexec/java_home)
 
