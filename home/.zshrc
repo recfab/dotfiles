@@ -168,16 +168,6 @@ compinit
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Added by nex: https://git.hubteam.com/HubSpot/nex
-# . ~/.hubspot/shellrc
-
-# export PATH="/opt/homebrew/opt/hshs/bin:$PATH"
-# export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
-# export GOROOT
-# export GOPRIVATE="git.hubteam.com"
-
-# export PATH="$(go env GOPATH)/src/git.hubteam.com/hubspot/vitess-upstream/bin:$PATH"
-# export PATH="$(go env GOPATH)/src/git.hubteam.com/hubspotprotected/vitess-internal/python/tls_vtctlclient:$PATH"
 # source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -199,3 +189,9 @@ export PATH="$(yarn global bin):$PATH"
 # Ant
 export ANT_HOME="$HOME/projects/apache-ant-1.10.14"
 export PATH="$ANT_HOME/bin:$PATH"
+
+# uv
+if [ -x "$(command -v uv)" ]; then
+  eval "$(uv generate-shell-completion zsh)"
+  eval "$(uvx --generate-shell-completion zsh)"
+fi
