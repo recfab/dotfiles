@@ -44,7 +44,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='mvim'
 else
-  export EDITOR='code --wait'
+  export EDITOR='vim'
 fi
 
 # alias gpmr='git push --set-upstream origin $(git_current_branch) --push-option merge_request.create'
