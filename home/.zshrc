@@ -200,3 +200,6 @@ fi
 if [ -x "$(command -v mise)" ]; then
   eval "$(mise activate zsh)"
 fi
+
+# zoxide
+eval "$(zoxide init zsh)"
