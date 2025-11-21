@@ -92,6 +92,7 @@ alias sql-proxy-prod-us="cloud_sql_proxy -instances=crio-canada:us-east1:crio-my
 alias sql-proxy-qa="cloud_sql_proxy -instances=crio-dev-267118:us-east1:dev-mysql=tcp:3307"
 alias pf-crio-auth="kubectl -n edc port-forward deploy/crio-authentication 8081:8080"
 alias pf-recruitment-api="kubectl -n recruitment-api port-forward deploy/recruitment-api 8082:8080"
+alias mcc="mvn clean compile"
 ## /Crio
 
 alias gdtd="git difftool --dir-diff"

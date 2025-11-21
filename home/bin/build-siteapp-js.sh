@@ -14,6 +14,6 @@ popd
 
 pushd "$siteapp_dir/public_html/js/vite-crio-components"
 
-npm run build
+npm run build:copy
 
 popd
