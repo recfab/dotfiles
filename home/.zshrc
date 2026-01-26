@@ -102,6 +102,11 @@ alias date-id="date '+%Y%m%d%H%M%S'"
 alias date-iso="date '+%Y-%m-%d'"
 alias date-long="date '+%A, %B %e, %Y'"
 
+# Format conversions with Miller
+alias tsv-to-csv="mlr --icsv --otsv cat"
+alias tsv-to-md="mlr --itsv --omd cat"
+alias csv-to-md="mlr --icsv --omd cat"
+
 function current_quarter() {
   date +"%Y %m" | awk '{printf ("%4d-Q%1d\n", $1, ($2/4)+1)}'
 }
