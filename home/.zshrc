@@ -149,8 +149,6 @@ export PATH="/usr/local/opt/make/libexec/gnubin:/usr/local/opt/openssl/bin:$PATH
 # export GOPATH="$HOME/go"
 # export PATH="$GOPATH/bin:$PATH"
 
-export PATH="$HOME/bin:$PATH"
-
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
@@ -158,6 +156,9 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/Users/nameny/Library/Python/3.9/bin:$PATH"
 export PATH="$PATH:/Users/nameny/.dotnet/tools"
 export PATH="$HOME/.local/bin:$PATH"
+
+# Claude settings
+export ENABLE_TOOL_SEARCH=true # Shrinks the context by enabling claude to discover tools via the file system, rather than loading all MCP tools in the context at the start. 
 
 # shellcheck source=~/.cargo/env
 # source "$HOME/.cargo/env"
