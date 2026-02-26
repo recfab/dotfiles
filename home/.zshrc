@@ -68,6 +68,8 @@ export COL_PHASE='Status:.status.phase'
 export COL_STORAGE_CLASS='StorageClass:.spec.storageClass'
 export COL_PERF_CLASS='PerfClass:.spec.performanceClass'
 
+pushtmp() { pushd $(mktemp -d) }
+
 # alias kgetks-failed="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
 # alias kgetvtgp-failed="k get vtgp -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
 # alias kgetks-wide="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase,StorageCls:.spec.storageClass,PerfCls:.spec.performanceClass,InMigration:.spec.inMigration"
@@ -93,6 +95,9 @@ alias sql-proxy-qa="cloud_sql_proxy -instances=crio-dev-267118:us-east1:dev-mysq
 alias pf-crio-auth="kubectl -n edc port-forward deploy/crio-authentication 8091:8080"
 alias pf-recruitment-api="kubectl -n recruitment-api port-forward deploy/recruitment-api 8092:8080"
 alias mcc="mvn clean compile"
+
+
+export JIRA_API_TOKEN=$(cat ~/.local/share/secrets/jira-cli)
 ## /Crio
 
 alias gdtd="git difftool --dir-diff"
