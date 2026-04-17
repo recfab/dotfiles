@@ -98,6 +98,7 @@ alias mcc="mvn clean compile"
 
 
 export JIRA_API_TOKEN=$(cat ~/.local/share/secrets/jira-cli)
+launchctl setenv JIRA_API_TOKEN "$JIRA_API_TOKEN"
 ## /Crio
 
 alias gdtd="git difftool --dir-diff"
@@ -217,3 +218,7 @@ fi
 eval "$(zoxide init zsh)"
 
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
