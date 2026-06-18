@@ -6,9 +6,6 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-# make sure we can find brew
-eval $(/opt/homebrew/bin/brew shellenv)
-
 export ZSH=~/.oh-my-zsh
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -97,10 +94,6 @@ alias pf-recruitment-api="kubectl -n recruitment-api port-forward deploy/recruit
 alias mcc="mvn clean compile"
 
 
-export JIRA_API_TOKEN=$(cat ~/.local/share/secrets/jira-cli)
-export FONTAWESOME_NPM_AUTH_TOKEN=$(cat ~/.local/share/secrets/fontawesometoken)
-
-launchctl setenv JIRA_API_TOKEN "$JIRA_API_TOKEN"
 ## /Crio
 
 alias gdtd="git difftool --dir-diff"
@@ -152,21 +145,10 @@ shell_info() {
 
 # export JAVA_HOME=$(/usr/libexec/java_home)
 
-export PATH="/usr/local/opt/make/libexec/gnubin:/usr/local/opt/openssl/bin:$PATH"
-
 # export GOPATH="$HOME/go"
 # export PATH="$GOPATH/bin:$PATH"
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/Users/nameny/Library/Python/3.9/bin:$PATH"
-export PATH="$PATH:/Users/nameny/.dotnet/tools"
-export PATH="$HOME/.local/bin:$PATH"
-
-# Claude settings
-export ENABLE_TOOL_SEARCH=true # Shrinks the context by enabling claude to discover tools via the file system, rather than loading all MCP tools in the context at the start. 
 
 # shellcheck source=~/.cargo/env
 # source "$HOME/.cargo/env"
@@ -185,25 +167,13 @@ compinit
 
 # source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/yaelnamen/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yaelnamen/google-cloud-sdk/path.zsh.inc'; fi
-
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/yaelnamen/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/yaelnamen/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Jenv
-export PATH="$HOME/.jenv/bin:$PATH"
+# Jenv (PATH is set in .zshenv)
 eval "$(jenv init -)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 export PATH="$(yarn global bin):$PATH"
-
-# Ant
-export ANT_HOME="$HOME/projects/apache-ant-1.10.14"
-export PATH="$ANT_HOME/bin:$PATH"
 
 # uv
 if [ -x "$(command -v uv)" ]; then
@@ -218,8 +188,6 @@ fi
 
 # zoxide
 eval "$(zoxide init zsh)"
-
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 # tabtab source for packages
 # uninstall by removing these lines

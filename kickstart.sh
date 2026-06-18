@@ -31,6 +31,7 @@ softlink_bin() {
 
 mkdir -p "$HOME/bin"
 
+softlink '.zshenv'
 softlink '.zshrc'
 # softlink '.gitconfig'
 softlink '.p10k.zsh'
