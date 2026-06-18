@@ -98,6 +98,8 @@ alias mcc="mvn clean compile"
 
 
 export JIRA_API_TOKEN=$(cat ~/.local/share/secrets/jira-cli)
+export FONTAWESOME_NPM_AUTH_TOKEN=$(cat ~/.local/share/secrets/fontawesometoken)
+
 launchctl setenv JIRA_API_TOKEN "$JIRA_API_TOKEN"
 ## /Crio
 
