@@ -1,6 +1,8 @@
 [tools]
 node = "24"
+"npm:yarn" = "latest"
 usage = "latest"
+uv = "0.9.18"
 
 [settings]
 idiomatic_version_file_enable_tools = ["python"]
