@@ -1,6 +1,7 @@
 [tools]
 node = "24"
 "npm:yarn" = "latest"
+python = "3.12.13"
 usage = "latest"
 uv = "0.9.18"
 
