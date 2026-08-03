@@ -4,7 +4,7 @@
   "editor.wordWrap": "on",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "editor.fontFamily": " Menlo, Monaco, Arial Hebrew,  'Courier New', monospace",
+  "editor.fontFamily": "Consolas, Menlo, Monaco, Arial Hebrew,  'Courier New', monospace",
   "editor.formatOnSave": true,
   "editor.tabCompletion": "on",
   "gitlens.advanced.messages": {},
@@ -27,7 +27,7 @@
     // "source.fixAll.eslint": true
   },
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "Shades of Purple",
+  "workbench.colorTheme": "Visual Studio Dark",
   "todo-tree.tree.showScanModeButton": false,
   "editor.renderWhitespace": "boundary",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -82,5 +82,21 @@
   "cSpell.userWords": [
     "graknlabs",
     "nofooter"
+  ],
+  "yaml.disableSchemaDetection": [
+    "**/docker-compose.yml",
+    "**/docker-compose.yaml",
+    "**/docker-compose.*.yml",
+    "**/docker-compose.*.yaml",
+    "**/compose.yml",
+    "**/compose.yaml",
+    "**/compose.*.yml",
+    "**/compose.*.yaml",
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
   ]
 }
