@@ -86,14 +86,11 @@ export COL_PERF_CLASS='PerfClass:.spec.performanceClass'
 # }
 ## /archived package
 
-## crio package
-alias auth="gcloud auth login --update-adc; npx google-artifactregistry-auth;"
-alias sql-proxy-prod-us="cloud_sql_proxy -instances=crio-canada:us-east1:crio-mysql=tcp:3307"
-alias sql-proxy-qa="cloud_sql_proxy -instances=crio-dev-267118:us-east1:dev-mysql=tcp:3307"
-alias pf-crio-auth="kubectl -n edc port-forward deploy/crio-authentication 8091:8080"
-alias pf-recruitment-api="kubectl -n recruitment-api port-forward deploy/recruitment-api 8092:8080"
-alias mcc="mvn clean compile"
-## /crio package
+# Domain-specific rc config (crio, personal, ...) — each domain package drops
+# a file here; core just imports whatever's present.
+for f in "$HOME"/.config/zsh/rc.d/*.zsh(N); do
+  source "$f"
+done
 
 alias gdtd="git difftool --dir-diff"
 alias gfix="git commit --fixup HEAD"

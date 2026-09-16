@@ -5,7 +5,19 @@ IFS=$'\n\t'
 this_dir=$(realpath "$(dirname "$0")")
 echo "Directory of setup script: $this_dir"
 
-stow --target="$HOME" home
+domain="${1:-}"
+packages=(core)
+case "$domain" in
+  "") ;;
+  crio|personal) packages+=("$domain") ;;
+  *)
+    echo "Usage: $0 [crio|personal]" >&2
+    exit 1
+    ;;
+esac
+
+cd "$this_dir"
+stow --target="$HOME" "${packages[@]}"
 
 # git config
 # echo "Configuring git"
