@@ -44,15 +44,18 @@ else
   export EDITOR='vim'
 fi
 
-# alias gpmr='git push --set-upstream origin $(git_current_branch) --push-option merge_request.create'
-
-# TODO A lot of this is HubSpot stuff that can be archived
 alias du="du -I'.git' -h -d1"
 alias k="kubectl"
 alias ke="k exec -it"
+alias kns="k config set-context --current --namespace"
+alias kyaml="k get -o yaml"
+
+pushtmp() { pushd $(mktemp -d) }
+
+## archived package
+# alias gpmr='git push --set-upstream origin $(git_current_branch) --push-option merge_request.create'
 # alias nvto='kubectl get pods -l component=vitess-operator -o name | cut -d / -f 2'
 # alias vtol='kubectl logs -f $(nvto) -c vto'
-alias kns="k config set-context --current --namespace"
 # alias knsc="kns vt-chaos"
 # alias knsg="kns vt-green"
 # alias knsb="kns vt-blue"
@@ -65,13 +68,10 @@ export COL_PHASE='Status:.status.phase'
 export COL_STORAGE_CLASS='StorageClass:.spec.storageClass'
 export COL_PERF_CLASS='PerfClass:.spec.performanceClass'
 
-pushtmp() { pushd $(mktemp -d) }
-
 # alias kgetks-failed="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
 # alias kgetvtgp-failed="k get vtgp -ocustom-columns=Name:.metadata.name,Status:.status.phase | grep -E -v -e 'Running|Deploying'"
 # alias kgetks-wide="k get ks -ocustom-columns=Name:.metadata.name,Status:.status.phase,StorageCls:.spec.storageClass,PerfCls:.spec.performanceClass,InMigration:.spec.inMigration"
 
-alias kyaml="k get -o yaml"
 # alias di="kubectl-datainfra"
 # alias tf="terraform"
 # alias tfval="terraform validate"
@@ -84,17 +84,16 @@ alias kyaml="k get -o yaml"
 #   ns="$2"
 #   k get pods -lkeyspace=$keyspace -n "$ns" -o jsonpath='{.items[*].status.containerStatuses[?(@.ready == false)] }' | jq
 # }
+## /archived package
 
-## Crio
+## crio package
 alias auth="gcloud auth login --update-adc; npx google-artifactregistry-auth;"
 alias sql-proxy-prod-us="cloud_sql_proxy -instances=crio-canada:us-east1:crio-mysql=tcp:3307"
 alias sql-proxy-qa="cloud_sql_proxy -instances=crio-dev-267118:us-east1:dev-mysql=tcp:3307"
 alias pf-crio-auth="kubectl -n edc port-forward deploy/crio-authentication 8091:8080"
 alias pf-recruitment-api="kubectl -n recruitment-api port-forward deploy/recruitment-api 8092:8080"
 alias mcc="mvn clean compile"
-
-
-## /Crio
+## /crio package
 
 alias gdtd="git difftool --dir-diff"
 alias gfix="git commit --fixup HEAD"
@@ -108,6 +107,7 @@ alias tsv-to-csv="mlr --icsv --otsv cat"
 alias tsv-to-md="mlr --itsv --omd cat"
 alias csv-to-md="mlr --icsv --omd cat"
 
+## archived package
 function current_quarter() {
   date +"%Y %m" | awk '{printf ("%4d-Q%1d\n", $1, ($2/4)+1)}'
 }
@@ -143,10 +143,11 @@ shell_info() {
 # eval "$(asdf exec direnv hook zsh)"
 # direnv() { asdf exec direnv "$@"; }
 
-# export JAVA_HOME=$(/usr/libexec/java_home)
-
 # export GOPATH="$HOME/go"
 # export PATH="$GOPATH/bin:$PATH"
+## /archived package
+
+# export JAVA_HOME=$(/usr/libexec/java_home)
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
