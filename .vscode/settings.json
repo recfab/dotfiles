@@ -1,5 +1,34 @@
 {
   "debug.javascript.defaultRuntimeExecutable": {
     "pwa-node": "/Users/yael/.local/share/mise/shims/node"
-  }
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#e6bbf1",
+    "activityBar.activeBorder": "#15202b",
+    "activityBar.background": "#e6bbf1",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#9f8521",
+    "activityBarBadge.foreground": "#15202b",
+    "activityBarTop.activeBackground": "#e6bbf1",
+    "activityBarTop.activeBorder": "#15202b",
+    "activityBarTop.background": "#e6bbf1",
+    "activityBarTop.foreground": "#15202b",
+    "activityBarTop.inactiveForeground": "#15202b99",
+    "commandCenter.border": "#15202b99",
+    "commandCenter.foreground": "#15202b",
+    "sash.hoverBorder": "#e6bbf1",
+    "statusBar.background": "#d691e8",
+    "statusBar.debuggingBackground": "#d691e8",
+    "statusBar.debuggingForeground": "#15202b",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#c667df",
+    "statusBarItem.remoteBackground": "#f9f5e5",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#d691e8",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#d691e899",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#d691e8"
 }
