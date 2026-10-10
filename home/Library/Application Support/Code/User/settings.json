@@ -81,7 +81,7 @@
     "chat-editing-snapshot-text-model:**/*.md": "default",
     "chat-editing-snapshot-text-model:**/*.markdown": "default",
     "chat-editing-snapshot-text-model:**/*.mdx": "default",
-    "chat-editing-snapshot-text-model:**/*.mdc": "default",
+    "chat-editing-snapshot-text-model:**/*.mdc": "default"
   },
   "todo-tree.general.tags": [
     "BUG",
