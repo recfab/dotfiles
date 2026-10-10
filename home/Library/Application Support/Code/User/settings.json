@@ -1,4 +1,3 @@
-// Place your settings in this file to overwrite the default settings
 {
   "editor.fontSize": 14,
   "editor.wordWrap": "on",
@@ -27,7 +26,7 @@
     // "source.fixAll.eslint": true
   },
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.colorTheme": "Dark Modern",
   "todo-tree.tree.showScanModeButton": false,
   "editor.renderWhitespace": "boundary",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -159,5 +158,40 @@
       "name": "Vue Green",
       "value": "#42b883",
     },
+    {
+      "name": "Obsidian Purple",
+      "value": "#a68af9",
+    },
   ],
+
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.07)",
+    "rgba(127,255,127,0.07)",
+    "rgba(255,127,255,0.07)",
+    "rgba(79,236,236,0.07)",
+  ],
+  "rewrap.wholeComment": false,
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "github.copilot.enable": {
+    "*": false,
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+  },
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.selectedModel": "opus[1m]",
+  "chat.viewSessions.orientation": "stacked",
+  "todo-tree.ripgrep.ripgrep": "/opt/homebrew/bin/rg",
+  "markdownEditorOptimized.outline.position": "left",
+  "markdownEditorOptimized.lineNumbers.visible": true,
+  "markdownEditorOptimized.spellCheck.enabled": false,
+  "markdownEditorOptimized.gitChanges.visible": false,
+  "mermaidChart.createDiagramFromStage.enabled": false,
+  "mermaidChart.preCommitSync.enabled": false,
 }
